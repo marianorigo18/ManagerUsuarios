@@ -3,18 +3,21 @@
         "nombre": "Juan",
         "apellido": "Pérez",
         "edad": 25,
-        "sexo": "masculino"
+        "sexo": "masculino",
+        "id": 1
       },
       {
         "nombre": "María",
         "apellido": "Gómez",
         "edad": 30,
-        "sexo": "femenino"
+        "sexo": "femenino",
+        "id": 2
       },
       {
         "nombre": "Carlos",
         "apellido": "López",
         "edad": 45,
-        "sexo": "masculino"
+        "sexo": "masculino",
+        "id": 2
       }
 ]
