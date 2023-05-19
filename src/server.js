@@ -8,7 +8,7 @@ const usuariosManager = new UsuariosManager()
 
 
 app.get("/usuarios", async (req, res) => {
-    const usuarios = await usuariosManager.consultarUsuarios()
+    const usuarios = await usuariosManager.consultarUsuarios(req.query.limit)
     res.send(usuarios)
 })
 

@@ -3,10 +3,14 @@ import fs from 'fs'
 const path = "src/clases/files/usuarios.json"
 
 export default class UsuariosManager{
-    consultarUsuarios = async () => {
+    consultarUsuarios = async (limite) => {
         if(fs.existsSync(path)){
             const data = await fs.promises.readFile(path, "utf-8")
             const users = JSON.parse(data)
+            if(limite){
+                const usuariosLimite = users.slice(0, limite)
+                return usuariosLimite
+            }
             return users;
         }else{
             return [];
@@ -33,6 +37,6 @@ export default class UsuariosManager{
         const usuariosFiltrados = usuarios.find((usuario) => {
             return usuario.id == id
         })
-        return usuariosFiltrados
+        return usuariosFiltrados ? usuariosFiltrados : "usuario no encontrado"
     }
 }
